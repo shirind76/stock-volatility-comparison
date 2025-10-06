@@ -26,7 +26,7 @@ The project follows reproducibility best practices:
 ---
 
 ## Folder Structure
-
+```
 Stock_volatility_comparison
 ├── README.md
 ├── LICENSE
@@ -54,9 +54,7 @@ Stock_volatility_comparison
         ├── return_lines.png
         ├── returns_correlation_heatmap.png
         └── volatility_bar.png
-
-
-
+```
 ---
 
 ##  Environment Setup
