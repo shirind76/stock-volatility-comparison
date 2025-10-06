@@ -1,8 +1,8 @@
 #  Stock Volatility Comparison — Apple, Microsoft, and Google
 
-**Author:** <Shirin Dehghannezhad>  
+**Author:** **Shirin Dehghannezhad**
 **Date:** October 2025  
-**Course:**Data Science 1
+**Course:** Data Science 1
 
 ---
 
