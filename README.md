@@ -100,10 +100,10 @@ pip install -r environment/requirements.txt
 
 ###  3. Analyze and Visualize (Python)
 - Computes **daily log returns**
-- Calculates **annualized volatility** using  
-  \[
-  \sigma_{\text{annual}} = \text{sd}(r_t) \times \sqrt{252}
-  \]
+- Calculates **annualized volatility** using:
+
+![Annualized volatility formula](https://latex.codecogs.com/svg.image?\sigma_{annual}=\text{sd}(r_t)\times\sqrt{252})
+
 - Creates and saves the following visualizations:
   - **Line chart** of adjusted closing prices (`price_lines.png`)
   - **Line chart** of daily log returns (`return_lines.png`)
