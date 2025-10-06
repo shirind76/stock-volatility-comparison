@@ -4,7 +4,7 @@
 # Description:
 #   Compute stock returns, volatility, and visualizations
 #   using cleaned data from data/processed/.
-#   Outputs:
+# Outputs:
 #     - volatility_summary.csv (table)
 #     - line, return, and heat map charts in outputs/figures/
 # ---------------------------------------------------------
@@ -23,6 +23,7 @@ os.makedirs("outputs/figures", exist_ok=True)
 tickers = ["AAPL", "MSFT", "GOOGL"]
 
 # Read cleaned data
+
 data = {}
 for ticker in tickers:
     path = f"data/processed/{ticker}_clean.csv"
@@ -34,6 +35,7 @@ for ticker in tickers:
 # -----------------------------
 # 1. Summary table of volatility
 # -----------------------------
+
 summary = []
 for ticker, df in data.items():
     daily_sd = df["return"].std()
@@ -54,6 +56,7 @@ print(" Saved summary table to outputs/tables/volatility_summary.csv")
 # -----------------------------
 # 2. Price line chart
 # -----------------------------
+
 plt.figure(figsize=(10, 5))
 for ticker, df in data.items():
     plt.plot(df["date"], df["adjusted_close"], label=ticker)
@@ -85,6 +88,7 @@ print("Saved daily return line chart")
 # 4. Correlation heat map
 # -----------------------------
 # Build a single DataFrame of returns
+
 returns_df = pd.DataFrame({t: data[t]["return"].values for t in tickers})
 corr = returns_df.corr()
 
@@ -108,5 +112,6 @@ plt.tight_layout()
 plt.savefig("outputs/figures/volatility_bar.png", dpi=300)
 plt.close()
 print(" Saved volatility bar chart")
+# -----------------------------
 
 print("\n All analysis completed. Check outputs/tables and outputs/figures folders.")
